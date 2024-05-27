@@ -17,7 +17,7 @@ export default function Home() {
         generate(formData).then((data) => setData(data))
       }}>
         <legend>Escolha o tipo do personagem:</legend>
-        <label className="flex justify-between cursor-pointer">Obejto
+        <label className="flex justify-between cursor-pointer">Objeto
           <input type="radio" name="tipo" id="objeto" value="objeto" />
         </label>
         <label className="flex justify-between cursor-pointer">Celebridade
