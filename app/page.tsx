@@ -17,7 +17,7 @@ export default function Home() {
         generate(formData).then((data) => setData(data))
       }}>
         <legend>Escolha o tipo do personagem:</legend>
-        <label className="flex justify-between cursor-pointer">Objeto
+        <label className="flex justify-between cursor-pointer">Obejto
           <input type="radio" name="tipo" id="objeto" value="objeto" />
         </label>
         <label className="flex justify-between cursor-pointer">Celebridade
@@ -26,12 +26,16 @@ export default function Home() {
         <label className="flex justify-between cursor-pointer">Profissional
           <input type="radio" name="tipo" id="profissional" value="profissão" />
         </label>
-        <input className="bg-blue-500 p-3 rounded-lg cursor-pointer" type="submit" value="Gerar" />
+        <input className="bg-blue-500 font-bold p-3 rounded-lg cursor-pointer" type="submit" value="Gerar" />
         <Loading />
       </form>
-      {data?.split("\n").map((line, index) => (
-        <p key={index}>{line}</p>
-      ))}
+      {data && (
+        <>
+          {data?.split("\n").map((line, index) => (
+            <p key={index}>{line}</p>
+          ))}
+        </>
+      )}
     </main>
   );
 }
